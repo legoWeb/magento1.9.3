@@ -1,0 +1,54 @@
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 10: parser error : expected '&gt;'  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;use&gt;standard&lt;/ use&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                                 ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 10: parser error : Opening and ending tag mismatch: use line 10 and unparseable  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;use&gt;standard&lt;/ use&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                                 ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 12: parser error : expected '&gt;'  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;module&gt;Magentotutorial_Helloworld&lt;/ module&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                                                          ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 12: parser error : Opening and ending tag mismatch: module line 12 and unparseable  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;module&gt;Magentotutorial_Helloworld&lt;/ module&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                                                          ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 13: parser error : expected '&gt;'  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;frontName&gt;helloworld&lt;/ frontName&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                                             ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 13: parser error : Opening and ending tag mismatch: frontName line 13 and unparseable  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;frontName&gt;helloworld&lt;/ frontName&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                                             ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 14: parser error : expected '&gt;'  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/ args&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                    ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 14: parser error : Opening and ending tag mismatch: args line 11 and unparseable  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/ args&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                    ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 15: parser error : expected '&gt;'  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():             &lt;/ helloworld&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 15: parser error : Opening and ending tag mismatch: helloworld line 9 and unparseable  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():             &lt;/ helloworld&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():                ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 16: parser error : expected '&gt;'  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():         &lt;/ routers&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():            ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 16: parser error : Opening and ending tag mismatch: routers line 8 and unparseable  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():         &lt;/ routers&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():            ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : expected '&gt;'  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():     &lt;/ frontend&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():        ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Opening and ending tag mismatch: frontend line 7 and unparseable  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():     &lt;/ frontend&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():        ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 18: parser error : expected '&gt;'  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/ config&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():    ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 18: parser error : Opening and ending tag mismatch: config line 1 and unparseable  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/ config&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():    ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 18: parser error : Extra content at the end of the document  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/ config&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:18:12+00:00 ERR (3): Warning: simplexml_load_string():    ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:33:42+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 9: parser error : Extra content at the end of the document  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:33:42+00:00 ERR (3): Warning: simplexml_load_string(): &lt;config&gt;  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510
+2018-07-14T10:33:42+00:00 ERR (3): Warning: simplexml_load_string(): ^  in C:\OSPanel\domains\localhost\lib\Varien\Simplexml\Config.php on line 510

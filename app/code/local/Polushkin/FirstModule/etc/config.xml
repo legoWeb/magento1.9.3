@@ -1,0 +1,32 @@
+<config>
+    <modules>
+        <Polushkin_FirstModule>
+            <version>0.1.0</version>
+        </Polushkin_FirstModule>
+    </modules>
+    <frontend>
+        <routers>
+            <helloworld>
+                <use>standard</use>
+                <args>
+                    <module>Polushkin_FirstModule</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
+        </routers>
+        <layout>
+            <updates>
+                <helloworld>
+                    <file>helloworld.xml</file>
+                </helloworld>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <helloworld>
+                <class>Polushkin_FirstModule_Block</class>
+            </helloworld>
+        </blocks>
+    </global>
+</config>

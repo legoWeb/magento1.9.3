@@ -3,7 +3,7 @@
 <layout>
     <helloworld_index_index>
         <reference name="content">
-            <block type="helloworld/view" name="helloworld"/>
+            <block type="helloworld/view" name="helloworld" template="polushkin/contact/view.phtml"/>
         </reference>
     </helloworld_index_index>
 </layout>

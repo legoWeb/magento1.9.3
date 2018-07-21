@@ -1,7 +1,7 @@
 <config>
     <modules>
         <Polushkin_FirstModule>
-            <version>0.1.0</version>
+            <version>1.0.0</version>
         </Polushkin_FirstModule>
     </modules>
     <frontend>
@@ -28,5 +28,26 @@
                 <class>Polushkin_FirstModule_Block</class>
             </helloworld>
         </blocks>
+        <models>
+            <helloworld>
+                <class>Polushkin_FirstModule_Model</class>
+                <resourceModel>helloworld_resource</resourceModel>
+            </helloworld>
+            <helloworld_resource>
+                <class>Polushkin_Firstmodule_Model_Resource</class>
+                <entities>
+                    <contact>
+                        <table>ain_contact</table>
+                    </contact>
+                </entities>
+            </helloworld_resource>
+        </models>
+        <resources>
+            <helloworld_setup>
+                <setup>
+                    <module>Polushkin</module>
+                </setup>
+            </helloworld_setup>
+        </resources>
     </global>
 </config>

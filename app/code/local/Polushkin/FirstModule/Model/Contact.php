@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: poluskinoleg
- * Date: 23.07.2018
- * Time: 10:57
- */
+
+class Polushkin_FirstModule_Model_Contact extends Mage_Core_Model_Abstract
+{
+    protected function _construct()
+    {
+        $this->_init('helloworld/contact');
+    }
+}

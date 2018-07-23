@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: poluskinoleg
- * Date: 23.07.2018
- * Time: 11:14
- */
+
+class Polushkin_FirstModule_Model_Resource_Contact_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+{
+    protected function _construct()
+    {
+        $this->_init('helloworld/contact');
+    }
+}

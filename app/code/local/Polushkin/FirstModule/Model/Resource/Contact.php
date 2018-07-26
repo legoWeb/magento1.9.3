@@ -4,6 +4,6 @@ class Polushkin_FirstModule_Model_Resource_Contact extends Mage_Core_Model_Resou
 {
     protected function _construct()
     {
-        $this->_init('helloworld/contact', 'request_id');
+        $this->_init('techtalk/contact', 'request_id');
     }
 }

@@ -1,8 +1,21 @@
+<?php
+/** @var Polushkin_FirstModule_Block_View $this */
+?>
 
+<?php
+$newClass = new Polushkin_FirstModule_Block_View();
+var_dump($newClass);
+
+$colection = $this->getRequestedRecord();
+foreach ($colection as $comment) {
+    echo ('<p>'. $comment .'</p>');
+}
+?>
 <p>This is a db table 'ain_contact'</p>
 
 <ul>
-    <li><? $this->getRequestedRecord()->getName('name') ?></li>
-    <li><? $this->getRequestedRecord()->getName('contact') ?></li>
+    <li><?= $this->getData()?> said:</li>
+    <li><?= $this->getRequestedRecord()?>it is comment</li>
     <li>You see that?</li>
 </ul>
+<?php //var_dump($this->getRequestedRecord()) ?>

@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Polushkin_FirstModule</module>
-                    <frontName>helloworld</frontName>
+                    <frontName>magetalk</frontName>
                 </args>
             </helloworld>
         </routers>
@@ -29,25 +29,25 @@
             </helloworld>
         </blocks>
         <models>
-            <helloworld>
+            <techtalk>
                 <class>Polushkin_FirstModule_Model</class>
-                <resourceModel>helloworld_resource</resourceModel>
-            </helloworld>
-            <helloworld_resource>
+                <resourceModel>techtalk_resource</resourceModel>
+            </techtalk>
+            <techtalk_resource>
                 <class>Polushkin_Firstmodule_Model_Resource</class>
                 <entities>
                     <contact>
                         <table>ain_contact</table>
                     </contact>
                 </entities>
-            </helloworld_resource>
+            </techtalk_resource>
         </models>
         <resources>
-            <helloworld_setup>
+            <techtalk_setup>
                 <setup>
-                    <module>Polushkin</module>
+                    <module>Polushkin_Firtmodule</module>
                 </setup>
-            </helloworld_setup>
+            </techtalk_setup>
         </resources>
     </global>
 </config>

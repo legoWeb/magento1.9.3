@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<layout>
+    <techtalk_index_index>
+        <reference name="content">
+            <block type="techtalk/view" name="techtalk" template="polushkin/contact/view.phtml"/>
+        </reference>
+    </techtalk_index_index>
+</layout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+
+<config>
+    <modules>
+        <Polushkin_TechTalk>
+            <version>1.0.1</version>
+        </Polushkin_TechTalk>
+    </modules>
+
+    <frontend>
+        <routers>
+            <techtalk>
+                <use>standard</use>
+                <args>
+                    <module>Polushkin_TechTalk</module>
+                    <frontName>magetalk</frontName>
+                </args>
+            </techtalk>
+        </routers>
+        <layout>
+            <updates>
+                <techtalk>
+                    <file>techtalk.xml</file>
+                </techtalk>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <techtalk>
+                <class>Polushkin_TechTalk_Block</class>
+            </techtalk>
+        </blocks>
+        <models>
+            <techtalk>
+                <class>Polushkin_TechTalk_Model</class>
+                <resourceModel>techtalk_resource</resourceModel>
+            </techtalk>
+            <techtalk_resource>
+                <class>Polushkin_TechTalk_Model_Resource</class>
+                <entities>
+                    <contact>
+                        <table>contact</table>
+                    </contact>
+                </entities>
+            </techtalk_resource>
+        </models>
+    </global>
+</config>

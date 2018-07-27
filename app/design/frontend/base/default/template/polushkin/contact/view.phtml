@@ -1,21 +1,12 @@
 <?php
-/** @var Polushkin_FirstModule_Block_View $this */
+/** @var Polushkin_TechTalk_Block_View $this */
 ?>
 
-<?php
-$newClass = new Polushkin_FirstModule_Block_View();
-var_dump($newClass);
+<h3 style="align-content: space-between; color: #00aa00">This is a db table 'contact'</h3>
 
-$colection = $this->getRequestedRecord();
-foreach ($colection as $comment) {
-    echo ('<p>'. $comment .'</p>');
-}
-?>
-<p>This is a db table 'ain_contact'</p>
-
-<ul>
-    <li><?= $this->getData()?> said:</li>
-    <li><?= $this->getRequestedRecord()?>it is comment</li>
-    <li>You see that?</li>
-</ul>
-<?php //var_dump($this->getRequestedRecord()) ?>
+<?php foreach ($this->getRequestedRecord() as $item) : ?>
+    <div><?php
+            echo $item->getName()  .  " said :" ."</br>";
+            echo $item->getComment() . "</br>"; ?>
+    </div>
+<?php endforeach; ?>

@@ -45,5 +45,21 @@
                 </entities>
             </techtalk_resource>
         </models>
+        <helpers>
+            <techtalk>
+                <class>Polushkin_TechTalk_Helper</class>
+            </techtalk>
+        </helpers>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <my_techtalk before="Mage_Adminhtml">Polushkin_TechTalk_Adminhtml</my_techtalk>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>

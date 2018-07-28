@@ -6,7 +6,8 @@
 
 <?php foreach ($this->getRequestedRecord() as $item) : ?>
     <div><?php
-            echo $item->getName()  .  " said :" ."</br>";
+            echo $item->getName() .  " said :" ."</br>";
+            echo "<hr>";
             echo $item->getComment() . "</br>"; ?>
     </div>
 <?php endforeach; ?>

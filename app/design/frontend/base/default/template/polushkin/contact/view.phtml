@@ -5,9 +5,19 @@
 <h3 style="align-content: space-between; color: #00aa00">This is a db table 'contact'</h3>
 
 <?php foreach ($this->getRequestedRecord() as $item) : ?>
-    <div><?php
+    <div class="<?= $this->getData('class') ?>"><?php
             echo $item->getName() .  " said :" ."</br>";
             echo "<hr>";
             echo $item->getComment() . "</br>"; ?>
     </div>
 <?php endforeach; ?>
+
+<div>
+    <?php $this->getChildChildHtml('cookies.notice') ?>
+</div>
+<div>
+    <?php $this->getChildChildHtml('google.adress') ?>
+</div>
+<div>
+    <?php echo $this->getChildHtml(‘topSearch’) ?>
+</div>

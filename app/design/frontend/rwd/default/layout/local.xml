@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<layout>
+    <customer_account_login>
+        <reference name="content">
+            <block type="cms/block" name="cookies.notice">
+                <action>
+                    <id>cookie_restriction_notice_block</id>
+                </action>
+            </block>
+            <block type="cms/block" name="google.adress"></block>
+        </reference>
+    </customer_account_login>
+    <default>
+        <remove name="right.poll" />
+        <remove name="paypal.partner.right.logo" />
+        <reference name="header">
+            <remove name="top.search" />
+        </reference>
+    </default>
+</layout>

@@ -109,10 +109,11 @@ class Polushkin_TechTalk_Adminhtml_ContactController extends Mage_Adminhtml_Cont
         $model = Mage::getModel('techtalk/contact')
            ->setId($this->getRequest()->getParam('request_id'))->delete();
         if ($model->getId()) {
-            Mage::getSingleton('adminhtml')->addSuccess('Contact was delete');
+            Mage::getSingleton('adminhtml/session')->addSuccess('Contact was delete');
         }
-        $this->_redirect('*/*/');
 //        var_dump($model);die;
+        $this->_redirect('*/*/');
+
     }
 
     /**

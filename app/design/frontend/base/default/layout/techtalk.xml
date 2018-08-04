@@ -4,6 +4,21 @@
     <techtalk_index_index>
         <reference name="content">
             <block type="techtalk/view" name="techtalk" template="polushkin/contact/view.phtml"/>
+            <action method="setData">
+                <key>class</key>
+                <value>contact-request</value>
+            </action>
+            <block type="cms/block" name="cookies.notice">
+                <action method="setBlockId">
+                    <id>cookie_restriction_notice_block</id>
+                </action>
+            </block>
+
+            <block type="cms/block" name="google.adress">
+                <action method="setBlockId">
+                    <id>google_adress</id>
+                </action>
+            </block>
         </reference>
     </techtalk_index_index>
 </layout>

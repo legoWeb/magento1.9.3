@@ -50,6 +50,16 @@
                 <class>Polushkin_TechTalk_Helper</class>
             </techtalk>
         </helpers>
+        <events>
+            <cms_page_get_available_statuses>
+                <observers>
+                    <techtalk>
+                        <class>techtalk/observer</class>
+                        <method>addStatus</method>
+                    </techtalk>
+                </observers>
+            </cms_page_get_available_statuses>
+        </events>
     </global>
     <admin>
         <routers>

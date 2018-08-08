@@ -1,0 +1,15 @@
+<?php
+/**
+ * @var Polushkin_Blog_Block_List $this
+ */
+?>
+<?php foreach ($this->getList() as $item) : ?>
+    <div><?php
+        echo $item->getName() ."</br>";
+        echo $item->getContent() . "</br>";
+        echo $item->getShortDescription(). "</br>";
+        echo $item->getBlogStatus(). "</br>";
+        echo $item->getCreatedAt(). "</br>";
+        echo $item->getUpdatedAt(). "</br>"; ?>
+    </div>
+<?php endforeach; ?>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+
+<config>
+    <modules>
+        <Polushkin_Blog>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Polushkin_Blog>
+    </modules>
+</config>

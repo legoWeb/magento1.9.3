@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<layout version="1.0.0">
+    <blog_index_index>
+        <reference name="content">
+            <block type="blog/list" name="blog" template="polushkin/blog/list.phtml"/>
+        </reference>
+    </blog_index_index>
+</layout>

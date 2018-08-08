@@ -59,6 +59,14 @@
                     </techtalk>
                 </observers>
             </cms_page_get_available_statuses>
+            <core_abstract_save_before>
+                <observers>
+                    <techtalk>
+                        <class>techtalk/observer</class>
+                        <method>addText</method>
+                    </techtalk>
+                </observers>
+            </core_abstract_save_before>
         </events>
     </global>
     <admin>

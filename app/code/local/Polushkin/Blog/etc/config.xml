@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+
+<config>
+    <modules>
+        <Polushkin_Blog>
+            <version>1.0.1</version>
+        </Polushkin_Blog>
+    </modules>
+    <global>
+        <blocks>
+            <blog>
+                <class>Polushkin_Blog_Block</class>
+            </blog>
+        </blocks>
+        <models>
+            <blog>
+                <class>Polushkin_Blog_Model</class>
+                <resourceModel>blog_resource</resourceModel>
+            </blog>
+            <blog_resource>
+                <class>Polushkin_Blog_Model_Resource</class>
+                <entities>
+                    <block>
+                        <table>blog_post</table>
+                    </block>
+                    <category>
+                        <table>blog_category</table>
+                    </category>
+                </entities>
+            </blog_resource>
+        </models>
+        <resources>
+            <blog_setup>
+                <setup>
+                    <module>Polushkin_Blog</module>
+                </setup>
+            </blog_setup>
+        </resources>
+        <helpers>
+            <blog>
+                <class>Polushkin_Blog_Helper</class>
+            </blog>
+        </helpers>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <blog>
+                    <file>blog.xml</file>
+                </blog>
+            </updates>
+        </layout>
+        <routers>
+            <blog>
+                <use>standard</use>
+                <args>
+                    <module>Polushkin_Blog</module>
+                    <frontName>blogpage</frontName>
+                </args>
+            </blog>
+        </routers>
+    </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <blog before="Mage_Adminhtml">Polushkin_Blog_Adminhtml</blog>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

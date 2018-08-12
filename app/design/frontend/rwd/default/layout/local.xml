@@ -11,11 +11,42 @@
             <block type="cms/block" name="google.adress"></block>
         </reference>
     </customer_account_login>
+
     <default>
         <remove name="right.poll" />
         <remove name="paypal.partner.right.logo" />
         <reference name="header">
             <remove name="top.search" />
+        </reference>
+        <reference name="footer_links">
+                <action method="removeLinkByUrl">
+                </action>
+        </reference>
+        <reference name="footer_links2">
+                <action
+                        method="addLink"
+                        translate="label title"
+                        module="contacts"
+                        ifconfig="contacts/contacts/enabled"
+                >
+                    <label>New page</label>
+                    <url>newpage</url>
+                    <title>New page</title>
+                    <prepare>true</prepare>
+                </action>
+        </reference>
+        <reference name="footer_links">
+            <action
+                    method="addLink"
+                    translate="label title"
+                    module="contacts"
+                    ifconfig="contacts/contacts/enabled"
+            >
+                <label>Blog</label>
+                <url>blogpage</url>
+                <title>Blog</title>
+                <prepare>true</prepare>
+            </action>
         </reference>
     </default>
 </layout>

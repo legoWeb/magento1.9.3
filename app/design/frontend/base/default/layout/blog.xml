@@ -6,4 +6,17 @@
             <block type="blog/list" name="blog" template="polushkin/blog/list.phtml"/>
         </reference>
     </blog_index_index>
+
+    <blog_index_view>
+        <reference name="content">
+            <block type="blog/list" name="blog" template="polushkin/blog/view.phtml"/>
+        </reference>
+    </blog_index_view>
+
+    <blog_index_post>
+        <reference name="content">
+            <block type="blog/list" name="blog" template="polushkin/blog/post.phtml"/>
+        </reference>
+    </blog_index_post>
+
 </layout>

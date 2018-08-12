@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<config>
+    <menu>
+        <cms>
+            <children>
+                <contacts translate="title" module="blog">
+                    <sort_order>200</sort_order>
+                    <title>Blogs</title>
+                    <action>adminhtml/contact</action>
+                </contacts>
+                <category>
+                    <sort_order>200</sort_order>
+                    <title>Categories</title>
+                    <action>adminhtml/contact</action>
+                </category>
+            </children>
+        </cms>
+    </menu>
+</config>

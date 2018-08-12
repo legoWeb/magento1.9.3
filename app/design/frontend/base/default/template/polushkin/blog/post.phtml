@@ -1,0 +1,18 @@
+<?php
+/**
+ * @var Polushkin_Blog_Block_Post $this;
+ */
+?>
+<?php foreach ($this->getList() as $item) : ?>
+<div class="container" style="background-color: lightgrey" align="center" style="box-sizing: border-box">
+    <div class="item-container" style="margin: 1%">
+        <h1><?= $item->getName(); ?></h1>
+    </div>
+    <div class="item-container" style="margin: 1%">
+        <textarea name="edit_text" id="<?php $item->getRequestId();?>" cols="50" rows="10"><?= $item->getContent();?></textarea>
+    </div>
+    <div class="item-container" style="margin: 1%">
+        <button class="button" style="box-shadow:1px 5px grey" style="margin: 1%">Save edit</button>
+    </div>
+</div>
+<?php endforeach; ?>

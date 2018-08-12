@@ -1,0 +1,30 @@
+<?php
+/**
+ * @var Polushkin_Blog_Block_View $this
+ */
+?>
+
+<?php $categories = $this->getCategorylist(); foreach ($categories as $category): ?>
+<div class="container" style="background-color: lightgrey" align="center" style="border-radius: 10em/1em;">
+    <h1 style="border-radius: 10em/1em;"><?= $category->getName();?></h1>
+    <p><?= $category->getDescription(); ?></p>
+    <img src="" alt="the place for image but someone to steal it" style="background-color: #00ACEE" class="image" height="150px" width="100px">
+    <hr/>
+
+    <?php $items = $this->getlist(); ?>
+    <ul class="container">
+        <?php foreach ($items as $item) : ?>
+            <li><a href="<?= Mage::getUrl('*/index/post', ['request_id' => $item->getRequestId()]);?>">
+                    <h3 style="margin: auto"><?= $item->getName(); ?></h3>
+                    <p><?= $item->getShortDescription(); ?></a></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<?php endforeach; ?>
+
+
+
+
+
+

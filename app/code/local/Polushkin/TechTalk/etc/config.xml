@@ -16,6 +16,13 @@
                     <frontName>magetalk</frontName>
                 </args>
             </techtalk>
+            <customer>
+                <args>
+                    <modules>
+                        <techtalk before="Mage_Contacts">Polushkin_TechTalk_Post</techtalk>
+                    </modules>
+                </args>
+            </customer>
         </routers>
         <layout>
             <updates>
@@ -30,6 +37,11 @@
             <techtalk>
                 <class>Polushkin_TechTalk_Block</class>
             </techtalk>
+            <!--<catalog>-->
+                <!--<rewrite>-->
+                    <!--<product_view>Polushkin_TechTalk_Block_Product_View</product_view>-->
+                <!--</rewrite>-->
+            <!--</catalog>-->
         </blocks>
         <models>
             <techtalk>
@@ -63,7 +75,7 @@
                 <observers>
                     <techtalk>
                         <class>techtalk/observer</class>
-                        <method>addText</method>
+                        <method>addContent</method>
                     </techtalk>
                 </observers>
             </core_abstract_save_before>

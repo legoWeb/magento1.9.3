@@ -2,14 +2,16 @@
 
 class Polushkin_Blog_Block_View extends Mage_Core_Block_Template
 {
-    public function getList()
+    public function getOneList()
     {
-        return Mage::getModel('blog/block')->load(1);
+        $postId = Mage::getModel('block/category', 'post_id');
+        return Mage::getModel('blog/block')->load($postId);
     }
 
-    public function getCategorylist()
+    public function getOneCategorylist()
     {
-        return Mage::getModel('blog/category')->load(1);
+        $postId = Mage::app()->getRequest()->getParam('post_id');
+        return Mage::getModel('blog/category')->load($postId);
     }
 
 }

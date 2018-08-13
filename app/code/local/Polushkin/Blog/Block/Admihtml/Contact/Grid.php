@@ -50,7 +50,7 @@ class Polushkin_Blog_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Block_W
      */
     public function getRowUrl($row)
     {
-        return $this->getUrl('*/*/edit', ['request_id' => $row->getId()]);
+        return $this->getUrl('*/*/edit', ['request_id' => $row->getRequestId()]);
     }
 
     /**

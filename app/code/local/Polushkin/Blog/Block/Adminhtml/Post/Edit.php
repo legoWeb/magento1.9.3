@@ -1,12 +1,13 @@
 <?php
 
-class Polushkin_Blog_Block_Adminhtml_Contact_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
+
+class Polushkin_Blog_Block_Adminhtml_Post_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
 {
     public function __construct()
     {
         $this->_objectId = 'request_id';
         $this->_blockGroup = 'blog';
-        $this->_controller = 'adminhtml_contact';
+        $this->_controller = 'adminhtml_post';
         $this->_mode = 'edit';
 
         parent::__construct();
@@ -42,8 +43,8 @@ class Polushkin_Blog_Block_Adminhtml_Contact_Edit extends Mage_Adminhtml_Block_W
      */
     public function getHeaderText()
     {
-        if (Mage::registry('contact_request')->getId()) {
-            return Mage::helper('blog')->__("Edit Request # %s", $this->escapeHtml(Mage::registry('contact_request')->getId()));
+        if (Mage::registry('post_request')->getId()) {
+            return Mage::helper('blog')->__("Edit Request # %s", $this->escapeHtml(Mage::registry('post_request')->getId()));
         }
         else {
             return Mage::helper('blog')->__('New Request');

@@ -3,26 +3,18 @@
  * @var Polushkin_Blog_Block_Post $this;
  */
 ?>
-<?php foreach ($this->getList() as $item) : ?>
-<div class="container" style="background-color: lightgrey" align="center" style="box-sizing: border-box">
-    <div class="item-container" style="margin: 1%">
-        <h1><?= $item->getName(); ?></h1>
+<?php $oneList = $this->getOneList();
+      $oneCategoryList = $this->getOneCategorylist();
+      $getImgUrl = Mage::getBaseUrl('media') . 'blog' .DS. $oneCategoryList->getImage();
+?>
+
+<div class="block" align="center">
+    <div class="block-title" style="margin: 1%">
+        <h1><?= $oneList->getName(); ?></h1>
     </div>
     <div class="item-container" style="margin: 1%">
-        <textarea name="edit_text" id="<?php $item->getRequestId();?>" cols="50" rows="10"><?= $item->getContent();?></textarea>
+        <p class="description"><?= $oneList->getContent();?></p>
     </div>
-    <div class="item-container" style="margin: 1%">
-        <button class="button" style="box-shadow:1px 5px grey" style="margin: 1%">Save edit</button>
+    <div class="block-image"><img src="<?= $getImgUrl ?>" alt="Image">
     </div>
 </div>
-<?php endforeach; ?>
-
-<?php
-//$resource = Mage::getSingleton('core/resource');
-//$write = $resource->getConnection('core_write');
-//$table = $resource->getTableName('blog/category');
-//$id = 2;
-//$sky = 'new-sky';
-//$query = "UPDATE {$table} SET sky = `{$new_sky}`WHERE request_id = ". (int)$id;
-//    $resource->query($query);
-//?>

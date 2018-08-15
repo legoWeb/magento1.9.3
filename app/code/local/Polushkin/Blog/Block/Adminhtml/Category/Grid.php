@@ -1,11 +1,11 @@
 <?php
 
-class Polushkin_Blog_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Polushkin_Blog_Block_Adminhtml_Category_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
     public function __construct()
     {
         parent::__construct();
-        $this->setId('contact_grid');
+        $this->setId('category_grid');
         $this->setDefaultSort('id');
         $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
@@ -14,7 +14,7 @@ class Polushkin_Blog_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Block_W
 
     protected function _prepareCollection()
     {
-        $collection = Mage::getResourceModel('blog/block_collection');
+        $collection = Mage::getResourceModel('blog/category_collection');
 
         $this->setCollection($collection);
         parent::_prepareCollection();
@@ -32,7 +32,13 @@ class Polushkin_Blog_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Block_W
         ]);
 
         $this->addColumn('name', [
-            'header' => $helper->__('Contact Name'),
+            'header' => $helper->__('Category Name'),
+            'type'   => 'text',
+            'index'  => 'name',
+        ]);
+
+        $this->addColumn('image', [
+            'header' => $helper->__('Image'),
             'type'   => 'text',
             'index'  => 'name',
         ]);
@@ -50,7 +56,7 @@ class Polushkin_Blog_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Block_W
      */
     public function getRowUrl($row)
     {
-        return $this->getUrl('*/*/edit', ['request_id' => $row->getRequestId()]);
+        return $this->getUrl('*/*/edit', ['request_id' => $row->getId()]);
     }
 
     /**

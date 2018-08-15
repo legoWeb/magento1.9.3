@@ -1,6 +1,6 @@
 <?php
 
-class Polushkin_TechTalk_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
+class Polushkin_Blog_Block_Adminhtml_Post_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
 {
     /**
      * Init form
@@ -8,8 +8,8 @@ class Polushkin_TechTalk_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminhtm
     public function __construct()
     {
         parent::__construct();
-        $this->setId('contact_request');
-        $this->setTitle(Mage::helper('techtalk')->__('Request info'));
+        $this->setId('post_request');
+        $this->setTitle(Mage::helper('blog')->__('Request info'));
     }
 
     /**
@@ -25,20 +25,18 @@ class Polushkin_TechTalk_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminhtm
 
     protected function _prepareForm()
     {
-        $model = Mage::registry('contact_request');
+        $model = Mage::registry('post_request');
 
         $form = new Varien_Data_Form(
             ['id' => 'edit_form',
                 'action' => $this->getUrl('*/*/save', array('request_id' => $this->getRequest()->getParam('request_id'))),
-                'method' => 'post',
-                'enctype' => 'multipart/form-data'
-            ]
+                'method' => 'post']
         );
 
         $form->setHtmlIdPrefix('block_');
 
         $fieldset = $form->addFieldset('base_fieldset', [
-            'legend' => Mage::helper('techtalk')->__('General Information'),
+            'legend' => Mage::helper('blog')->__('General Information'),
             'class' => 'fieldset-wide'
         ]);
 
@@ -50,25 +48,19 @@ class Polushkin_TechTalk_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminhtm
 
         $fieldset->addField('name', 'text', [
             'name'     => 'name',
-            'label'    => Mage::helper('techtalk')->__('Contact Name'),
-            'title'    => Mage::helper('techtalk')->__('Contact Name'),
+            'label'    => Mage::helper('blog')->__('Contact Name'),
+            'title'    => Mage::helper('blog')->__('Contact Name'),
             'required' => true,
         ]);
 
-        $fieldset->addField('comment', 'editor', [
-            'name'     => 'comment',
-            'label'    => Mage::helper('techtalk')->__('Comment'),
-            'title'    => Mage::helper('techtalk')->__('Comment'),
+        $fieldset->addField('short_description', 'editor', [
+            'name'     => 'short_description',
+            'label'    => Mage::helper('blog')->__('Comment'),
+            'title'    => Mage::helper('blog')->__('Comment'),
             'style'    => 'height:36em',
             'required' => true,
             'config'   => Mage::getSingleton('cms/wysiwyg_config')->getConfig(),
         ]);
-
-        $fieldset->addType('categoryImage','Polushkin_TechTalk_Block_Adminhtml_Contact_Edit_Renderer_CategoryImage');
-        $fieldset->addField('image', 'categoryImage', array(
-            'name'      => 'image',
-            'label'     => Mage::helper('techtalk')->__('Image')
-        ));
 
         $form->setValues($model->getData());
         $form->setUseContainer(true);

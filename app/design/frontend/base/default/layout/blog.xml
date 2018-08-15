@@ -18,5 +18,4 @@
             <block type="blog/list" name="blog" template="polushkin/blog/post.phtml"/>
         </reference>
     </blog_index_post>
-
 </layout>

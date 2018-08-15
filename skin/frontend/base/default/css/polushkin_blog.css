@@ -1,0 +1,13 @@
+.myFirstClass {
+    background-color: #00ACEE;
+    color: #00aa00;
+    margin: 5%;
+}
+
+.itemClass{
+    background-color: #00aa00;
+    color: red;
+    box-shadow: 1px 0 4px 4px rgba(0, 0, 0, .3);
+    padding: 10px;
+    margin: 10px;
+}

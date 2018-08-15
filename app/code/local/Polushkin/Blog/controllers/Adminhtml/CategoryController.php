@@ -1,13 +1,13 @@
 <?php
 
-class Polushkin_TechTalk_Adminhtml_ContactController extends Mage_Adminhtml_Controller_Action
+class Polushkin_Blog_Adminhtml_CategoryController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
     {
-        $this->_title($this->__('Contact requests'))->_title($this->__('Contact'));
+        $this->_title($this->__('Category requests'))->_title($this->__('Category'));
         $this->loadLayout();
-        $this->_setActiveMenu('cms/contact');
-        $this->_addContent($this->getLayout()->createBlock('techtalk/adminhtml_contact'));
+        $this->_setActiveMenu('cms/category');
+        $this->_addContent($this->getLayout()->createBlock('blog/adminhtml_category'));
         $this->renderLayout();
     }
 
@@ -15,21 +15,21 @@ class Polushkin_TechTalk_Adminhtml_ContactController extends Mage_Adminhtml_Cont
     {
         $this->loadLayout();
         $this->getResponse()->setBody(
-            $this->getLayout()->createBlock('techtalk/adminhtml_contact_grid')->toHtml()
+            $this->getLayout()->createBlock('blog/adminhtml_category_grid')->toHtml()
         );
     }
 
     public function exportCsvAction()
     {
-        $fileName = 'contacts.csv';
-        $grid = $this->getLayout()->createBlock('techtalk/adminhtml_contact_grid');
+        $fileName = 'blog.csv';
+        $grid = $this->getLayout()->createBlock('blog/adminhtml_category_grid');
         $this->_prepareDownloadResponse($fileName, $grid->getCsvFile());
     }
 
     public function exportExcelAction()
     {
-        $fileName = 'contacts.xml';
-        $grid = $this->getLayout()->createBlock('techtalk/adminhtml_contact_grid');
+        $fileName = 'blog.xml';
+        $grid = $this->getLayout()->createBlock('blog/adminhtml_category_grid');
         $this->_prepareDownloadResponse($fileName, $grid->getExcelFile($fileName));
     }
 
@@ -43,20 +43,20 @@ class Polushkin_TechTalk_Adminhtml_ContactController extends Mage_Adminhtml_Cont
 
     public function editAction()
     {
-        $this->_title($this->__('Contact Request'));
+        $this->_title($this->__('Category Request'));
 
         // 1. Get ID and create model
         $id = $this->getRequest()->getParam('request_id');
-        $model = Mage::getModel('techtalk/contact');
+        $model = Mage::getModel('blog/category');
         $modelobject = (array)Mage::getSingleton('adminhtml/session')->getModelobject(true);
         if (count($modelobject)) {
-            Mage::registry('techtalk_block')->setData($modelobject);
+            Mage::registry('blog_category')->setData($modelobject);
         }
         // 2. Initial checking
         if ($id) {
             $model->load($id);
             if (!$model->getId()) {
-                Mage::getSingleton('adminhtml/session')->addError(Mage::helper('techtalk')->__('This block no longer exists.'));
+                Mage::getSingleton('adminhtml/session')->addError(Mage::helper('blog')->__('This block no longer exists.'));
                 $this->_redirect('*/*/');
                 return;
             }
@@ -71,13 +71,13 @@ class Polushkin_TechTalk_Adminhtml_ContactController extends Mage_Adminhtml_Cont
         }
 
         // 4. Register model to use later in blocks
-        Mage::register('contact_request', $model);
+        Mage::register('category_request', $model);
 
         // 5. Build edit form
         $this->loadLayout();
-        $this->_addContent($this->getLayout()->createBlock('techtalk/adminhtml_contact_edit'));
-        $this->_setActiveMenu('cms/contacts')
-            ->_addBreadcrumb($id ? Mage::helper('techtalk')->__('Edit Request') : Mage::helper('techtalk')->__('New Request'), $id ? Mage::helper('techtalk')->__('Edit Request') : Mage::helper('techtalk')->__('New Request'))
+        $this->_addContent($this->getLayout()->createBlock('blog/adminhtml_category_edit'));
+        $this->_setActiveMenu('cms/category')
+            ->_addBreadcrumb($id ? Mage::helper('blog')->__('Edit Request') : Mage::helper('blog')->__('New Request'), $id ? Mage::helper('blog')->__('Edit Request') : Mage::helper('blog')->__('New Request'))
             ->renderLayout();
     }
 
@@ -85,22 +85,22 @@ class Polushkin_TechTalk_Adminhtml_ContactController extends Mage_Adminhtml_Cont
     {
         try {
             $id = $this->getRequest()->getParam('request_id');
-            $model = Mage::getModel('techtalk/contact')->load($id);
+            $model = Mage::getModel('blog/category')->load($id);
             $model->setData($this->getRequest()->getParams());
             $this->_uploadFile('image',$model);
             $model->setCreatedAt(Mage::app()->getLocale()->date())
-            ->save();
+                ->save();
 
             if (!$model->getId()) {
                 Mage::getSingleton('adminhtml/session')->addError('Cannot save this Block');
-        }
+            }
         } catch (Exception $e) {
             Mage::logException($e);
             Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
             Mage::getSingleton('adminhtml/session')->setModelobject($model->setData());
         }
 
-        Mage::getSingleton('adminhtml/session')->addSuccess('Contact was saved succesfully');
+        Mage::getSingleton('adminhtml/session')->addSuccess('Category was saved succesfully');
 
         $this->_redirect('*/*/'.$this->getRequest()->getParam('back', 'index'),
             array('request_id'=> $model->getId()));
@@ -109,10 +109,10 @@ class Polushkin_TechTalk_Adminhtml_ContactController extends Mage_Adminhtml_Cont
 
     public function deleteAction()
     {
-        $model = Mage::getModel('techtalk/contact')
-           ->setId($this->getRequest()->getParam('request_id'))->delete();
+        $model = Mage::getModel('blog/category')
+            ->setId($this->getRequest()->getParam('request_id'))->delete();
         if ($model->getId()) {
-            Mage::getSingleton('adminhtml/session')->addSuccess('Contact was delete');
+            Mage::getSingleton('adminhtml/session')->addSuccess('Category was delete');
         }
 //        var_dump($model);die;
         $this->_redirect('*/*/');
@@ -126,7 +126,7 @@ class Polushkin_TechTalk_Adminhtml_ContactController extends Mage_Adminhtml_Cont
      */
     protected function _isAllowed()
     {
-        return Mage::getSingleton('admin/session')->isAllowed('cms/contact');
+        return Mage::getSingleton('admin/session')->isAllowed('cms/category');
     }
 
     protected function _uploadFile($fieldName,$model)

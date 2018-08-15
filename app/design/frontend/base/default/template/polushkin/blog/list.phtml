@@ -3,10 +3,13 @@
  * @var Polushkin_Blog_Block_List $this
  */
 ?>
+
 <?php foreach ($this->getCategoryList() as $item) : ?>
-<div class="container" align="center" style="background-color: lightgrey;" style="margin: 20px">
-    <h1 style="box-shadow: 1px 0 4px 4px rgba(0, 0, 0, .3);" class="item-container" style="padding: 10px" style="margin: 10px" style="color: #00ACEE">
-        <a href="<?= Mage::getUrl('*/index/view',['post_id' => $item->getPostId()]) ?>"><?= $item->getName();?></a>
+<div class="block-content" style="myFirstClass"  align="center">
+    <h1 style="itemClass">
+        <a href="<?= Mage::getUrl('*/index/view',
+            ['post_id' => $item->getRequestId()]) ?>"><?= $item->getName();?>
+        </a>
     </h1>
 </div>
 <?php endforeach; ?>

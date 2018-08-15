@@ -4,15 +4,15 @@
     <menu>
         <cms>
             <children>
-                <contacts translate="title" module="blog">
+                <post translate="title" module="blog">
                     <sort_order>200</sort_order>
-                    <title>Blogs</title>
-                    <action>adminhtml/contact</action>
-                </contacts>
-                <category>
-                    <sort_order>200</sort_order>
-                    <title>Categories</title>
-                    <action>adminhtml/contact</action>
+                    <title>Post</title>
+                    <action>adminhtml/post</action>
+                </post>
+                <category translate="title" module="blog">
+                    <sort_order>150</sort_order>
+                    <title>Category</title>
+                    <action>adminhtml/category</action>
                 </category>
             </children>
         </cms>

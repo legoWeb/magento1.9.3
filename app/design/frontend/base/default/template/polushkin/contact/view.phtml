@@ -8,8 +8,10 @@
     <div class="<?= $this->getData('class') ?>"><?php
             echo $item->getName() .  " said :" ."</br>";
             echo "<hr>";
+            echo $item->getImage();
             echo $item->getComment() . "</br>"; ?>
     </div>
+    <img src="<?= Mage::getBaseUrl('media') . 'blog' .DS. $item->getImage(); ?>" alt="Image">
 <?php endforeach; ?>
 
 <div>
@@ -21,3 +23,4 @@
 <div>
     <?php echo $this->getChildHtml(‘topSearch’) ?>
 </div>
+<!--<img src="--><?//= $url = Mage::getBaseUrl('media') . 'blog' .DS. getImage();?><!--" alt="">-->

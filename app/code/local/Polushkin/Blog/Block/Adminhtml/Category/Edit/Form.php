@@ -1,6 +1,6 @@
 <?php
 
-class Polushkin_Blog_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
+class Polushkin_Blog_Block_Adminhtml_Category_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
 {
     /**
      * Init form
@@ -8,7 +8,7 @@ class Polushkin_Blog_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminhtml_Bl
     public function __construct()
     {
         parent::__construct();
-        $this->setId('contact_request');
+        $this->setId('category_request');
         $this->setTitle(Mage::helper('blog')->__('Request info'));
     }
 
@@ -25,12 +25,14 @@ class Polushkin_Blog_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminhtml_Bl
 
     protected function _prepareForm()
     {
-        $model = Mage::registry('contact_request');
+        $model = Mage::registry('category_request');
 
         $form = new Varien_Data_Form(
             ['id' => 'edit_form',
                 'action' => $this->getUrl('*/*/save', array('request_id' => $this->getRequest()->getParam('request_id'))),
-                'method' => 'post']
+                'method' => 'post',
+                'enctype' => 'multipart/form-data'
+            ]
         );
 
         $form->setHtmlIdPrefix('block_');
@@ -48,19 +50,30 @@ class Polushkin_Blog_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminhtml_Bl
 
         $fieldset->addField('name', 'text', [
             'name'     => 'name',
-            'label'    => Mage::helper('blog')->__('Contact Name'),
-            'title'    => Mage::helper('blog')->__('Contact Name'),
+            'label'    => Mage::helper('blog')->__('Category Name'),
+            'title'    => Mage::helper('blog')->__('Category Name'),
             'required' => true,
         ]);
 
-        $fieldset->addField('comment', 'editor', [
-            'name'     => 'comment',
+        $fieldset->addField('description', 'editor', [
+            'name'     => 'description',
             'label'    => Mage::helper('blog')->__('Comment'),
             'title'    => Mage::helper('blog')->__('Comment'),
             'style'    => 'height:36em',
             'required' => true,
             'config'   => Mage::getSingleton('cms/wysiwyg_config')->getConfig(),
         ]);
+
+        $fieldset->addType('categoryImage','Polushkin_Blog_Block_Adminhtml_Category_Edit_Renderer_CategoryImage');
+        $fieldset->addField('image', 'categoryImage', array(
+            'name'      => 'image',
+            'label'     => Mage::helper('blog')->__('Image'),
+            'title'    => Mage::helper('blog')->__('Image'),
+            'required' => false,
+
+
+
+        ));
 
         $form->setValues($model->getData());
         $form->setUseContainer(true);

@@ -1,11 +1,11 @@
 <?php
 
-class Polushkin_TechTalk_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Polushkin_Blog_Block_Adminhtml_Post_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
     public function __construct()
     {
         parent::__construct();
-        $this->setId('contact_grid');
+        $this->setId('post_grid');
         $this->setDefaultSort('id');
         $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
@@ -14,7 +14,7 @@ class Polushkin_TechTalk_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Blo
 
     protected function _prepareCollection()
     {
-        $collection = Mage::getResourceModel('techtalk/contact_collection');
+        $collection = Mage::getResourceModel('blog/block_collection');
 
         $this->setCollection($collection);
         parent::_prepareCollection();
@@ -24,22 +24,17 @@ class Polushkin_TechTalk_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Blo
 
     protected function _prepareColumns()
     {
-        $helper = Mage::helper('techtalk');
+        $helper = Mage::helper('blog');
 
         $this->addColumn('id', [
             'header' => $helper->__('Request #'),
             'index'  => 'request_id',
         ]);
-        $this->addColumn('image', [
-            'header' => $helper->__('Image'),
-            'type'   => 'text',
-            'index'  => 'name',
-        ]);
 
         $this->addColumn('name', [
             'header' => $helper->__('Contact Name'),
             'type'   => 'text',
-            'index'  => 'image',
+            'index'  => 'name',
         ]);
 
         $this->addExportType('*/*/exportCsv', $helper->__('CSV'));
